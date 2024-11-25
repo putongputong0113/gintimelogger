@@ -4,6 +4,7 @@ package middleware
 
 import (
 	"fmt"
+	"log"
 	"time"
 
 	"github.com/putongputong0113/gintimelogger/models"
@@ -14,6 +15,10 @@ import (
 
 // TimingMiddleware 用于记录请求的耗时
 func TimingMiddleware(db *gorm.DB) gin.HandlerFunc {
+	// 自动迁移
+	if err := db.AutoMigrate(&models.RequestLog{}); err != nil {
+		log.Fatalf("自动迁移失败: %v", err)
+	}
 	return func(c *gin.Context) {
 		// 记录请求开始时间
 		start := time.Now()
