@@ -4,8 +4,9 @@ package middleware
 
 import (
 	"fmt"
-	"gintimelogger/models"
 	"time"
+
+	"github.com/putongputong0113/gintimelogger/models"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
