@@ -4,10 +4,10 @@ package middleware
 
 import (
 	"fmt"
+	"gintimelogger/models"
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/yourusername/gintimelogger/models" // 引入你的 models 包
 	"gorm.io/gorm"
 )
 
