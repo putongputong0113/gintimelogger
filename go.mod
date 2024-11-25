@@ -1,4 +1,4 @@
-module gintimelogger
+module github.com/putongputong0113/gintimelogger
 
 go 1.23.2
 
